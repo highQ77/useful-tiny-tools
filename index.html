@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>William77 Software</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="su-bg-70">
+  <header class="su-px-16 su-pb-0">
+    <div class="su-p-8">
+      <h2>Useful Utility</h2>
+      <h6>- enjoy your life -</h6>
+    </div>
+  </header>
+  <main class="su-px-16">
+    <div class="su-p-8">
+      <hr>
+      <!-- 001-console-pro -->
+      <div>
+        <h5>001-console-pro</h5>
+        <h6 class="su-text-40">讓你的 console.log 更實用, 1.詳實紀錄時間戳 / 2.六種顏色分類 / 3.同種顏色篩選</h6>
+        <button class="su-my-4" onclick="consolePro()">Run</button>
+        <script src="./js/001-console-pro.js"></script>
+        <div class="su-my-4">
+          <textarea class="su-fs-12 su-text-secondary1 su-bg-20 w-100 su-p-8 su-bd-3 su-bd-c30">
+            點擊 run 並請開啟 console 面板
+            console.log('API demo, 不同功能用不同顏色表示, 端看開發人員如何分類')
+            console.r('console.r("red")')
+            console.o('console.o("orange")')
+            console.y('console.y("yellow")')
+            console.g('console.g("green")')
+            console.b('console.b("blue")')
+            console.p('console.p("purple")')
+            console.r('red 第 2 次')
+            console.r('red 第 3 次')
+            console.log('請於上方 Filter 處輸入[r]查看篩選結果')
+          </textarea>
+        </div>
+        <div class="su-row">
+          <div><img class="su-my-4 su-bd-3 su-bd-c30 su-col-sm-12 su-col-md-4 su-col-lg-4" src="./img/001.png"
+              style="width:100%;"></div>
+          <div class="su-col-sm-12 su-col-md-4 su-col-lg-4"></div>
+          <div class="su-col-sm-12 su-col-md-4 su-col-lg-4"></div>
+        </div>
+
+      </div>
+      <hr class="su-mt-80">
+      <div>
+        <h5>002-mobile-log</h5>
+        <h6 class="su-text-40">在網頁上輸出console.log資料，手機的 debug 要 remote debug比較麻煩，在此提供簡易的手機除錯方法</h6>
+        <button class="su-my-4" onclick="mobileLog()">Run</button>
+        <script src="./js/002-mobile-log.js"></script>
+        <div class="su-my-4">
+          <textarea class="su-fs-12 su-text-secondary1 su-bg-20 w-100 su-p-8 su-bd-3 su-bd-c30">
+            按 run 後請點選下方按鈕測試，或在 console 面板輸入 console.log('test') 試試
+          </textarea>
+        </div>
+        <div class="su-row">
+          <div><button class="su-my-4" onclick="console.log('你辦到了')">console.log('你辦到了')</button></div>
+          <div><button class="su-my-4" onclick="console.log(123)">console.log(123)</button>
+          </div>
+          <div><button class="su-my-4"
+              onclick="document.getElementById('mlog') && document.getElementById('mlog').remove()">關閉 log 面板</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+  <script>
+    window.onload = () => {
+      [...document.getElementsByTagName('textarea')].forEach(tt => {
+        let t = tt.value.split('\n').map(item => item.trim()).filter(item => item != '')
+        tt.rows = t.length
+        tt.value = t.join('\n')
+      })
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+/* ---------------------- additional */
+
+/* h */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+/* body */
+body {
+    color: #333;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-none {
+    display: none;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position: absolute;
+}
+
+.pos-fixed {
+    position: fixed;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #666;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* override */
+p {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    --su-layout-gutter: 4px;
+    --su-layout-col-bg-color: rgba(0, 0, 0, 0.05);
+    --su-layout-col-border: 0px solid gray;
+    --su-layout-row-bound: 1023px;
+}
